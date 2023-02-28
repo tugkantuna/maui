@@ -27,10 +27,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
-	  <CodesignKey>Apple Development: TUKAN TUNA (LC2TKZ24U2)</CodesignKey>
-	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
-	</PropertyGroup>
+	
 
 	<ItemGroup>
 		<!-- App Icon -->
