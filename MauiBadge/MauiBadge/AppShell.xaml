@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiBadge.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiBadge"
+    xmlns:badge="clr-namespace:MauiBadge"
+    x:DataType="local:BadgeModel"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.TabBarBackgroundColor="Black"
+    Shell.TabBarUnselectedColor="Gray"
+    Shell.TabBarForegroundColor="White"
+    Shell.TabBarTitleColor="White">
+
+    <TabBar>
+        <Tab 
+             Icon="fatura.png"
+             Title="MainPage 1">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab 
+             Icon="fatura.png"
+             Title="MainPage 2">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab 
+             Icon="fatura.png"
+             Title="MainPage 2"
+            
+             badge:Badge.Visible="True"
+             badge:Badge.TextColor="{Binding TextColor}"
+             badge:Badge.BackgroundColor="{Binding BadgeColor}"
+             badge:Badge.Text="{Binding BadgeText}"
+            
+             badge:Badge.TitleVisible="True"
+             badge:Badge.TitleTextColor="White"
+             badge:Badge.TitleBackgroundColor="Green"
+             badge:Badge.TitleText="{Binding BadgeTitleText}">
+
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab 
+             Icon="fatura.png"
+             Title="MainPage 3">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </TabBar>
+</Shell>
